@@ -12,4 +12,34 @@
       align-content: center;
     }
   }
+
+  .nav-btn {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .nav-btn {
+      display: inline-flex;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: var(--theme-color-primary-700);
+      transition: 1s;
+      transform: translateY(-100vh);
+    }
+
+    .responsive_nav {
+      transform: none;
+
+    }
+  }
 }
