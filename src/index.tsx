@@ -5,6 +5,7 @@ import './index.css';
 import './global.scss';
 import reportWebVitals from './reportWebVitals';
 import {Home} from "./pages";
+import './fonts/Gilroy/Gilroy-Bold.ttf';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
