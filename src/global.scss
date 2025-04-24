@@ -17,10 +17,37 @@
   --theme-color-common-200: #F5F4F5;
   --theme-color-common-100: #FCFBFC;
 
-  --white-color: rgba(255, 255, 255, 1);
-  --black-color: rgba(17, 17, 17, 1);
+  --color-danger-primary: #EF7679;
+  --color-danger-secondary: #E04F52;
+  --color-danger-dark: #D1373A;
+  --color-success-primary: #6FCF97;
+  --color-success-secondary: #4BB17D;
+  --color-success-dark: #2E8B5E;
+
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(17, 17, 17, 1);
 
   --text-color-primary: var(--theme-color-primary-900);
 
-  --padding-base: 4px;
+  --padding-base: 16px;
+  --padding-base-half: calc(var(--padding-base) / 2);
+  --padding-base-quarter: calc(var(--padding-base) / 4);
+
+  --gap-base: 8px;
+  --gap-base-half: calc(var(--gap-base) / 2);
+  --gap-base-quarter: calc(var(--gap-base) / 4);
+
+  --text-size-base: 14px;
+  --text-size-small: 10px;
+  --text-size-large: 20px;
+
+  --text-heading-size: 96px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --padding-base: 4px;
+    --gap-base: 6px;
+    --text-heading-size: 46px;
+  }
 }
