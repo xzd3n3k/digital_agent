@@ -1,5 +1,7 @@
 .navbar-container {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: calc(var(--padding-base) * 5) calc(var(--padding-base) * 10);
 
   .nav {
