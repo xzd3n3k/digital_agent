@@ -6,6 +6,7 @@ import './global.scss';
 import reportWebVitals from './reportWebVitals';
 import {Home} from "./pages";
 import './fonts/Gilroy/Gilroy-Bold.ttf';
+import {Navbar} from "./components";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,6 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <div>
       <Router>
+          <Navbar></Navbar>
           <Routes>
               <Route path="/" element={<Home />} />
           </Routes>

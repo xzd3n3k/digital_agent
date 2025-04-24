@@ -1,6 +1,6 @@
 import './Home.scss';
 import React from "react";
-import {Navbar} from "../../components";
+import {Heading} from "../../components";
 
 export default function Home() {
     console.log("\n\n{\\__/}\n" +
@@ -18,7 +18,7 @@ export default function Home() {
 
     return (
         <div className="home-container">
-            <Navbar></Navbar>
+            <Heading>Solving problems. Thousands at a time</Heading>
         </div>
     )
 }

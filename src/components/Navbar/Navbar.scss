@@ -1,16 +1,15 @@
 .navbar-container {
-  .menu {
+  display: inline-flex;
+  padding: calc(var(--padding-base) * 5) calc(var(--padding-base) * 10);
+
+  .nav {
     display: flex;
-    gap: calc(var(--padding-base) * 12);
-    list-style: none;
+    gap: calc(var(--gap-base) * 6);
 
     a {
       text-decoration: none;
       color: inherit;
+      align-content: center;
     }
-  }
-
-  .nav {
-    padding: calc(var(--padding-base) * 18) calc(var(--padding-base) * 41);
   }
 }
