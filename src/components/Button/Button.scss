@@ -2,7 +2,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-base) calc(var(--padding-base) * 1.5);
+  padding: var(--button-padding-base) calc(var(--button-padding-base) * 1.5);
   border-radius: 12px;
   font-size: var(--text-size-base);
   font-weight: bold;
@@ -77,12 +77,12 @@
 
   // sizes
   &--small {
-    padding: var(--padding-base-half) var(--padding-base);
+    padding: var(--button-padding-base-half) var(--button-padding-base);
     font-size: var(--text-size-small);
   }
 
   &--large {
-    padding: calc(var(--padding-base) * 1.5) calc(var(--padding-base) * 2);
+    padding: calc(var(--button-padding-base) * 1.5) calc(var(--button-padding-base) * 2);
     font-size: var(--text-size-large);
   }
 

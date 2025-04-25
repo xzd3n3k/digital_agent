@@ -33,6 +33,9 @@
   --padding-base-half: calc(var(--padding-base) / 2);
   --padding-base-quarter: calc(var(--padding-base) / 4);
 
+  --button-padding-base: 16px;
+  --button-padding-base-half: calc(var(--button-padding-base) / 2);
+
   --gap-base: 8px;
   --gap-base-half: calc(var(--gap-base) / 2);
   --gap-base-quarter: calc(var(--gap-base) / 4);
@@ -42,6 +45,12 @@
   --text-size-large: 20px;
 
   --text-heading-size: 96px;
+}
+
+@media (max-width: 1250px) {
+  :root {
+    --text-heading-size: 46px;
+  }
 }
 
 @media (max-width: 768px) {
