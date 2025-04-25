@@ -1,4 +1,11 @@
 .home-container {
   height: 100%;
   padding: var(--padding-base) calc(var(--padding-base) * 10);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stats-showcase {
+  padding: calc(var(--padding-base) * 10) 0;
 }

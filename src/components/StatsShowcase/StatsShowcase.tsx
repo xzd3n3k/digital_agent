@@ -8,9 +8,14 @@ interface StatItem {
     text: string;
 }
 
-export default function StatsShowcase({stats}: {stats: StatItem[]}) {
+interface StatsShowcaseProps {
+    stats: StatItem[];
+    className?: string;
+}
+
+export default function StatsShowcase({ stats, className }: StatsShowcaseProps) {
     return (
-        <div className="stats">
+        <div className={`stats ${className || ""}`}>
             {stats.map((stat, index) => {
                 const IconComponent = Icons[stat.icon];
 
