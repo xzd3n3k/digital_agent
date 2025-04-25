@@ -1,5 +1,6 @@
 .navbar-container {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
   padding: calc(var(--padding-base) * 5) calc(var(--padding-base) * 10);
@@ -45,7 +46,7 @@
       align-items: center;
       justify-content: center;
       gap: 1.5rem;
-      font-size: var(--text-heading-size);
+      font-size: calc(var(--text-heading-size) / 2);
       color: var(--theme-color-primary-200);
       background-color: var(--theme-color-primary-700);
       transition: 1s;

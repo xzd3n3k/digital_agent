@@ -12,12 +12,14 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <div>
+  <div className="page-container-wrapper">
       <Router>
           <Navbar></Navbar>
+          <div className="page-container">
           <Routes>
               <Route path="/" element={<Home />} />
           </Routes>
+          </div>
       </Router>
   </div>
 );

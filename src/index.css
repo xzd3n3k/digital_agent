@@ -5,6 +5,12 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "GilroyRegular";
+  src: local("GilroyRegular"),
+  url("./fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
+}
+
 html, body, #root, #root>div {
   height: 100%
 }
@@ -18,10 +24,34 @@ body {
   font-family: 'GilroyBold';
   letter-spacing: 0.05em;
   color: var(--text-color-primary);
+
+  span {
+    font-family: 'GilroyRegular';
+  }
+
+  b, strong {
+    font-family: 'GilroyBold';
+    font-weight: bold;
+  }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin:0;
+}
+
+.page-container-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1;
+  overflow: auto;
 }
