@@ -1,6 +1,7 @@
 import './Navbar.scss';
 import {Button} from "../index";
 import {useRef} from "react";
+import { CloseIcon, MenuIcon } from "../../icons";
 
 export default function Navbar() {
     const navRef = useRef<HTMLDivElement>(null);
@@ -11,11 +12,12 @@ export default function Navbar() {
     return (
         <div className="navbar-container">
             <Button variant="ghost" size="small" className="nav-btn" onClick={showNavbar}>
-                <img src="/menu.svg" alt="Close" className="button-icon" />
+                <MenuIcon className="menu-icon"/>
             </Button>
+
             <nav className="nav" ref={navRef}>
                 <Button variant="ghost" size="small" className="nav-btn nav-close-btn" onClick={showNavbar}>
-                    <img src="/close.svg" alt="Close" className="button-icon" />
+                    <CloseIcon className="close-icon"/>
                 </Button>
                 <a href="/">Home</a>
                 <a href="/products">Products</a>

@@ -22,6 +22,16 @@
   @media only screen and (max-width: 1024px) {
     .nav-btn {
       display: inline-flex;
+
+      .menu-icon {
+        fill: var(--text-color-primary);
+        stroke: var(--text-color-primary);
+      }
+
+      .close-icon {
+        fill: var(--theme-color-primary-200);
+        stroke: var(--theme-color-primary-200);
+      }
     }
 
     nav {
@@ -35,6 +45,8 @@
       align-items: center;
       justify-content: center;
       gap: 1.5rem;
+      font-size: var(--text-heading-size);
+      color: var(--theme-color-primary-200);
       background-color: var(--theme-color-primary-700);
       transition: 1s;
       transform: translateY(-100vh);
