@@ -1,0 +1,11 @@
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(var(--gap-base) * 2);
+}
+
+.stat-item {
+  display: inline-flex;
+  align-items: center;
+}
