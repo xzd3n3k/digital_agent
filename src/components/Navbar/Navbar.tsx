@@ -1,13 +1,23 @@
 import './Navbar.scss';
-import {Button} from "../index";
-import {useRef} from "react";
-import { CloseIcon, MenuIcon } from "../../icons";
+import {Button, Dialog, VoiceRecording} from "../index";
+import {ReactNode, useRef, useState} from "react";
+import {CallIcon, CloseIcon, MenuIcon} from "../../icons";
 
 export default function Navbar() {
+    const [showDialog, setShowDialog] = useState(false);
     const navRef = useRef<HTMLDivElement>(null);
     const showNavbar = () => {
         navRef.current?.classList.toggle("responsive_nav");
     }
+
+    const toggleDialog = () => {
+        setShowDialog(!showDialog)
+    }
+
+    const closeBtnTemplate: ReactNode =
+        <Button className="hang-up-icon-btn" size="icon" variant="destructive">
+            <CallIcon />
+        </Button>
 
     return (
         <div className="navbar-container">
@@ -25,7 +35,18 @@ export default function Navbar() {
                 <a href="/account">Account</a>
                 <a href="/help">Help</a>
             </nav>
-            <Button>Call Jessica</Button>
+            <Button onClick={toggleDialog}>Call Jessica</Button>
+            <Dialog
+                className="calling-dialog"
+                size="small"
+                title="Calling Jessica"
+                showSeparator={false}
+                isOpen={showDialog}
+                customCloseBtn={closeBtnTemplate}
+                onClose={toggleDialog}
+            >
+                <VoiceRecording></VoiceRecording>
+            </Dialog>
         </div>
     )
 }

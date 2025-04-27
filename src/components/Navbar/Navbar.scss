@@ -64,3 +64,13 @@
     }
   }
 }
+
+.calling-dialog {
+  background: linear-gradient(51.33deg, var(--theme-color-primary-100) 0%, var(--theme-color-primary-200) 100%) !important;
+
+  .hang-up-icon-btn {
+    height: var(--button-size-base);
+    width: var(--button-size-base);
+    border-radius: 100px;
+  }
+}
