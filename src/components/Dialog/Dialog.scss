@@ -1,0 +1,66 @@
+$backdrop-color: rgba(0, 0, 0, 0.5);
+$dialog-overlay-z-index: 1000;
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $backdrop-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: $dialog-overlay-z-index;
+}
+
+.dialog-container {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+.dialog-small {
+  width: 400px;
+}
+
+.dialog-medium {
+  width: 600px;
+}
+
+.dialog-large {
+  width: 800px;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(var(--button-padding-base) * 2);
+
+  &--show-separator{
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.dialog-title {
+  margin: 0;
+  font-size: var(--text-size-large);
+}
+
+.dialog-close-button {
+  background: none;
+  border: none;
+  font-size: var(--text-size-small);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.dialog-content {
+  padding: calc(var(--button-padding-base) * 2);
+  overflow: auto;
+}
