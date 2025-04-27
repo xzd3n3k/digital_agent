@@ -1,19 +1,21 @@
 import './VoiceRecording.scss';
 import React, { useEffect, useRef, useState } from 'react';
+import {MicIcon} from "../../icons";
 
 interface VoiceRecorderProps {
     onRecordingComplete?: (blob: Blob) => void;
 }
 
 export default function VoiceRecording({ onRecordingComplete }: VoiceRecorderProps) {
-    const [isRecording, setIsRecording] = useState(false);
     const [audioUrl, setAudioUrl] = useState<string | null>(null);
     const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef<HTMLAudioElement>(null);
-    const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-    const chunksRef = useRef<Blob[]>([]);
-    const websocketRef = useRef<WebSocket | null>(null);
+    const [isRecording, setIsRecording] = useState(false);
     const [shouldAutoPlay, setShouldAutoPlay] = useState(false);
+
+    const audioRef = useRef<HTMLAudioElement>(null);
+    const chunksRef = useRef<Blob[]>([]);
+    const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+    const websocketRef = useRef<WebSocket | null>(null);
 
     useEffect(() => {
         const ws = new WebSocket('ws://localhost:8080');
@@ -105,9 +107,10 @@ export default function VoiceRecording({ onRecordingComplete }: VoiceRecorderPro
     return (
         <div className="voice-recording-container">
             <div
-                className="voice-recording-button"
+                className={`voice-recording-button ${isPlaying ? 'disabled' : ''}`}
                 onClick={isPlaying ? undefined : toggleRecording}
             >
+                <span className={`mic-icon`}> <MicIcon /> </span>
             </div>
 
             {audioUrl && (
