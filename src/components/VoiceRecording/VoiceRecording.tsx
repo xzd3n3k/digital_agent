@@ -110,7 +110,7 @@ export default function VoiceRecording({ onRecordingComplete }: VoiceRecorderPro
                 className={`voice-recording-button ${isPlaying ? 'disabled' : ''}`}
                 onClick={isPlaying ? undefined : toggleRecording}
             >
-                <span className={`mic-icon`}> <MicIcon /> </span>
+                <span className={`mic-icon ${isPlaying || isRecording ? 'pulsate' : ''}`}> <MicIcon /> </span>
             </div>
 
             {audioUrl && (
