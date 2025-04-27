@@ -76,6 +76,10 @@
   }
 
   // sizes
+  &--icon {
+    padding: 4px;
+  }
+
   &--small {
     padding: var(--button-padding-base-half) var(--button-padding-base);
     font-size: var(--text-size-small);
